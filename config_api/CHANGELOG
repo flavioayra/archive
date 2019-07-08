@@ -1,0 +1,129 @@
+1.3.4
+
+09/10/2003 Fl�vio de Ayra Mendes <h4@locked.org>
+
+	* config_api.c: applied patch from Josh Glover fixing
+	  config_get_num_options(), config_close and config_get_sections
+
+	* Makefile: applyed patch from Josh Globax adding install stuff
+	  and shared library compilation option
+
+
+1.3.3
+
+11/15/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* find.c: find_option() was not stoping when came into another
+          section
+
+
+1.3.2
+
+07/25/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* util.c: getline() usage was "horribly broken". Thanks to Scott
+		  Bronson <bronson@rinspin.com> and Alex <alex@void.com.br>
+		  for reporting and testing.
+
+	* config_api.c: config_erase() was not fseek()ing after ftruncate()
+
+1.3.1
+
+	* config_api.c: fixed some bugs on fopen() flag mode. Thanks to 
+			Alex <alex@void.com.br> for reporting
+
+
+1.3
+
+	* config_api.c, utils.c, find.c: fixed some sizeof() bugs
+
+	* applyed some of the patch from Eric <eric.moors@philips.com>
+
+	* config_api.c: make config_read() work with NULL as dest to simply
+		        ignore de value. just check is the option is there
+
+	* released 1.3.1
+
+1.2.1
+
+	* config_api.c, config_api.h: added config_on_change()
+
+	* released 1.3
+
+1.2
+
+03/29/2002 Flavio de Ayra Mendes <h4@locked.org>
+	
+	* utils.c: added my_fgets() for '\' handling
+
+	* *.c: s/fgets()/my_fgets()/g
+
+	* released 1.2.1
+
+1.1
+
+03/24/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* config_api.c: config_get_sections(): finished
+
+	* util.c: is_a_section(): fixed minors bugs
+
+	* config_api.c: config_check(): make it ignore blank lines
+
+	* config_api.c: config_get_options(): finished
+
+1.0
+
+03/15/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* utils.c: added is_a_section() and is_an_option() for handling sscanf
+		   stuff
+
+	* fixed a lot of minors bugs
+
+	* is_an_option() && config_check(): syntax like b= = a wasn't an error
+
+
+03/23/2002 Flavio de Ayra Mendes <h4@locked.org>
+	
+	* config_api.c: fixed core dump. subs 1 of MAX_*_SIZE when using with
+			is_*_()
+
+	* find.c: idem
+
+
+0.1
+
+03/15/2002 Flavio de Ayra Mendes <h4@locked.org>
+	
+	* config_api.c: substitute the god damnit tmpfile() with my_tmpfile in
+			config_write() and config_erase
+
+	* utils.c: make my_tmpfile()
+
+
+03/14/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* added config_erase() for erase options and sections
+
+	* added config_check() for file syntax checking
+
+
+02/16/2002 Flavio de Ayra Mendes <h4@locked.org>
+
+	* README: updated
+
+
+02/14/2002 Flavio de Ayra Mendes <h4@locked.org>
+	
+	* README: added
+
+
+02/03/2002 Flavio de Ayra Mendes <h4@locked.org>
+	
+	* config_api.c: fixed the space on section problem. Thanks to 
+	  Alex <alex@void.com.br> for reporting
+	
+
+
+
